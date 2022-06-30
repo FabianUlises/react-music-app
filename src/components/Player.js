@@ -30,12 +30,17 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
             Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
         )
     }
+    const moveInputHandler = (e) => {
+        audioRef.current.currentTime = e.target.value
+        setSongInfo({...songInfo, currentTime: e.target.value})
+        console.log(e.target.value)
+    }
 
     return(
         <div className="player">
             <div className="time-control">
                 <p>{getTime(songInfo.currentTime)}</p>
-                <input type="range" />
+                <input min={0} max={songInfo.duration} value={songInfo.currentTime} onChange={moveInputHandler} type="range" />
                 <p>{getTime(songInfo.duration)}</p>
             </div>
             <div className="play-control">
@@ -43,7 +48,7 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
                 <FontAwesomeIcon onClick={playSongHandler} size='2x' className='play' icon={faPlay} />
                 <FontAwesomeIcon size='2x' className='skip-forward' icon={faAngleRight} />
             </div>
-            <audio onTimeUpdate={timeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
+            <audio onTimeUpdate={timeUpdateHandler} onLoadedMetadata={timeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
         </div>
     )
 };
