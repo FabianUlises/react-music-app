@@ -3,6 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1, h2, h3 {
+    color: rgb(54, 54, 54);
+}
+body {
+    font-family: 'Dosis', sans-serif;
+}
+h3, h4 {
+    font-weight: 500;
+    letter-spacing: 1px
+}
 
 @import './song'; 
 @import './player';
