@@ -1,0 +1,21 @@
+.library {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    background-color: orange;
+    height: 100%;
+    box-shadow: 2px 2px 50px rgba(101, 101, 101, 0.628);
+    overflow-y: scroll;
+    h2 {
+        padding: 2rem
+    }
+}
+.library-songs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 100%;
+    }
+}
