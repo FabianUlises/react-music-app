@@ -22,8 +22,8 @@ const timeUpdateHandler = (e) => {
   return (
     <div className="App">
       <Song currentSong={currentSong} />
-      <Player setIsPlaying={setIsPlaying} isPlaying={isPlaying} currentSong={currentSong} songInfo={songInfo} setSongInfo={setSongInfo}/>
-      <Library songs={songs} setCurrentSong={setCurrentSong} />
+      <Player setIsPlaying={setIsPlaying} isPlaying={isPlaying} currentSong={currentSong} songInfo={songInfo} setSongInfo={setSongInfo} audioRef={audioRef} />
+      <Library songs={songs} setCurrentSong={setCurrentSong} audioRef={audioRef} isPlaying={isPlaying} />
       <audio onTimeUpdate={timeUpdateHandler} onLoadedMetadata={timeUpdateHandler} ref={audioRef} audioRef={audioRef} src={currentSong.audio}></audio>
     </div>
   );
