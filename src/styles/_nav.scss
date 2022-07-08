@@ -2,4 +2,20 @@ nav {
     min-height: 10vh;
     background-color: orange;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        border: 2px solid rgb(65, 65, 65);
+        padding: .5rem;
+        transition: all 450ms ease;
+        &:hover {
+            background-color: rgb(65, 65, 65);
+            color: whitesmoke;
+
+        }
+    }
 }

@@ -7,6 +7,9 @@
     height: 100%;
     box-shadow: 2px 2px 50px rgba(101, 101, 101, 0.628);
     overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: all 250ms ease;
+    opacity: 0;
     h2 {
         padding: 2rem
     }
@@ -45,4 +48,8 @@
 }
 .selected {
     background-color: orange;
+}
+.active-library {
+    transform: translateX(0);
+    opacity: 1;
 }
