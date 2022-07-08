@@ -10,7 +10,7 @@ function chillHop() {
             audio: 'https://mp3.chillhop.com/serve.php/?mp3=35507',
             color: ['#2eb35e', '#5c7a66'],
             id: uuid(),
-            active: true
+            active: false
         },
         {
             name: 'Sundials',
@@ -30,7 +30,7 @@ function chillHop() {
             audio: 'https://mp3.chillhop.com/serve.php/?mp3=36925',
             color: ['#2eb35e', '#5c7a66'],
             id: uuid(),
-            active: true
+            active: false
         },
         {
             name: 'Growing Through',
@@ -40,7 +40,7 @@ function chillHop() {
             audio: 'https://mp3.chillhop.com/serve.php/?mp3=35636',
             color: ['#2eb35e', '#5c7a66'],
             id: uuid(),
-            active: true
+            active: false
         }
     ]
 }
