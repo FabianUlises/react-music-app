@@ -13,6 +13,12 @@ h3, h4 {
     font-weight: 500;
     letter-spacing: 1px
 }
+.App {
+    transition: all .5s ease
+}
+.library-active {
+    margin-left: 30%;
+}
 
 @import './song'; 
 @import './player';

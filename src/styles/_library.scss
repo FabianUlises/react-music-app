@@ -17,6 +17,7 @@
 .library-song {
     display: flex;
     align-items: center;
+    transition: background .5s ease;
     img {
         width: 30%;
     }
@@ -52,4 +53,9 @@
 .active-library {
     transform: translateX(0);
     opacity: 1;
+}
+@media screen and (max-width: 768px){ 
+    .library {
+        width: 100%;
+    }
 }
