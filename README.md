@@ -1,1 +1,1 @@
-Music player with static library.
+Music player created using ReactJs with static library.
